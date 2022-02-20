@@ -1,4 +1,4 @@
-
+import time
 
 from selenium import  webdriver
 from selenium.webdriver import ActionChains
@@ -33,7 +33,7 @@ class BasePage:
             locator.click()
             print(f"the element{element}has been clicked")
         except:
-            print(f"the element {element}isn't is clicked")
+            print(f"the element {element} isn't is clicked")
 
 
 
@@ -117,6 +117,16 @@ class BasePage:
             print("El elemento se desplazo")
         except:
             print("El elemento no se desplazo")
+
+
+
+    def search_element(self,elemento):
+
+        try:
+            search=self.driver.find_element(By.XPATH,elemento)
+            self.driver.execute_script('arguments[0].scrollIntoView(true);',search)
+        except:
+            print("No se ha desplazado ")
 
 
     def close_browser(self):

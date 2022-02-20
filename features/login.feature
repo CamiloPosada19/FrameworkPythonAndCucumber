@@ -1,6 +1,6 @@
-Feature: Primer escenario
+Feature: Login scenario
 
-  Background: Prueba
+  Background: Steps commons
     Given Open the browser
 
   Scenario: Make incorrect login
