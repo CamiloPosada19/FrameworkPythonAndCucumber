@@ -35,9 +35,6 @@ class BasePage:
         except:
             print(f"the element {element} isn't is clicked")
 
-
-
-
       # Click on the item with id
     def click_id(self, element):
         try:
@@ -45,7 +42,7 @@ class BasePage:
                 EC.element_to_be_clickable((By.ID, element))
             )
             locator.click()
-            print(f"the element{element}has been clicked")
+            print(f"the element{element}has been clickKEed")
         except:
             print(f"the element {element} isn't clicked")
 
